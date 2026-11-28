@@ -2,6 +2,7 @@
 
 import { AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Plus } from "lucide-react";
+import Image from "next/image";
 import { useRef, useState } from "react";
 import { Reveal } from "@/components/animations/Reveal";
 import { SplitReveal } from "@/components/animations/SplitReveal";
@@ -86,11 +87,11 @@ export function Projects() {
           </SplitReveal>
           <Reveal className="self-end lg:col-span-4" delay={0.1}>
             <p className="text-lg leading-relaxed text-fg-dim">
-              From LLM agents at work to recognised final-year research — a few projects that shaped
-              how I build.
+              From LLM agents at work and products I&apos;ve shipped to recognised final-year research — a
+              few projects that shaped how I build.
             </p>
             <p className="mt-4 text-xs text-muted">
-              Visuals are abstract illustrations, not product screenshots.
+              Live products show real screenshots; other visuals are abstract illustrations.
             </p>
           </Reveal>
         </div>
@@ -115,9 +116,22 @@ export function Projects() {
                 className="relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:h-full"
               >
                 <div className="absolute inset-0 transition-transform duration-[1.4s] ease-[var(--ease-out-expo)] group-hover:scale-[1.06]">
-                  <div data-card-visual className="absolute inset-[-10%]">
-                    <ProjectVisual kind={p.visual} />
-                  </div>
+                  {p.screenshots[0] ? (
+                    // Parallax is horizontal only, so overscan the sides but keep the page's top edge visible.
+                    <div data-card-visual className="absolute inset-x-[-10%] inset-y-0">
+                      <Image
+                        src={p.screenshots[0].src}
+                        alt={p.screenshots[0].alt}
+                        fill
+                        className="object-cover object-top"
+                        sizes="(min-width: 1024px) 60vw, 100vw"
+                      />
+                    </div>
+                  ) : (
+                    <div data-card-visual className="absolute inset-[-10%]">
+                      {p.visual && <ProjectVisual kind={p.visual} />}
+                    </div>
+                  )}
                 </div>
                 <span className="absolute left-5 top-5 font-mono text-xs text-white/70">
                   {pad2(i + 1)} / {pad2(projects.length)}

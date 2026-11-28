@@ -10,8 +10,8 @@
  *
  *  ✏️  EDITABLE / MISSING FIELDS — fill these in when available:
  *    • profile.links.github.href ........ no GitHub URL in either document (link is hidden while null)
- *    • projects[].github / projects[].live  no repository or live URLs supplied (buttons hidden while null)
- *    • projects[].screenshots ........... no screenshots supplied; abstract illustrations are shown instead
+ *    • projects[].github ................ no repository URLs supplied (button hidden while null)
+ *    • projects[].screenshots ........... live products use homepage screenshots; the rest show abstract illustrations
  *
  *  Intentionally NOT published: phone number, street address and referees'
  *  contact details from the CV.
@@ -307,6 +307,102 @@ export const projects: Project[] = [
     live: null,
     screenshots: [],
     visual: "agents",
+  },
+  {
+    slug: "questio",
+    name: "Questio — AI MCQ Generator",
+    category: "AI Product",
+    context: "Independent build · Live product",
+    description:
+      "Upload a PDF, DOCX or text file and Questio turns it into high-quality multiple choice questions, with correct answers and explanations, in English or Sinhala.",
+    problem:
+      "Teachers and students spend hours writing practice questions by hand, and almost no tools generate them in Sinhala.",
+    contribution:
+      "Built the document parsing pipeline, the AI generation layer on Gemini and OpenAI, and shareable session links so a group can take the same quiz together in real time.",
+    tech: ["Next.js", "Gemini", "OpenAI", "Real-time"],
+    github: null,
+    live: "https://questios.vercel.app/",
+    screenshots: [{ src: "/images/projects/questio.webp", alt: "Questio landing page: Generate intelligent MCQs instantly" }],
+  },
+  {
+    slug: "helabiz",
+    name: "Helabiz",
+    category: "SaaS Platform",
+    context: "Independent build · Live product",
+    description:
+      "An all-in-one platform for Sri Lankan small businesses: a drag-and-drop website builder on the front, and orders, stock, customers, expenses and profit on the back — in Sinhala and English.",
+    problem:
+      "Small sellers run on WhatsApp and Instagram chats, keep accounts in notebooks and can't afford a developer for a proper website.",
+    contribution:
+      "Designed and built the product end to end: the drag-and-drop site builder with templates, cart and checkout, and the business dashboard for orders, inventory, invoices and reports, with a bilingual Sinhala/English interface.",
+    tech: ["Next.js", "Drag & Drop Builder", "E-Commerce", "i18n"],
+    github: null,
+    live: "https://helabiz.vercel.app/",
+    screenshots: [{ src: "/images/projects/helabiz.webp", alt: "Helabiz landing page in Sinhala with a preview of the website builder" }],
+  },
+  {
+    slug: "fixlk",
+    name: "FixLK",
+    category: "Marketplace",
+    context: "Independent build · Live product",
+    description:
+      "A services marketplace for Sri Lanka: post a job for free and verified electricians, plumbers, carpenters, tutors and photographers in your district send you quotes.",
+    problem:
+      "Finding a trustworthy tradesperson in Sri Lanka still runs on word of mouth, with no easy way to compare price, rating or response time.",
+    contribution:
+      "Built the job posting and quoting flow, provider profiles with ratings and response times, district-based search across all 25 districts and WhatsApp-first contact.",
+    tech: ["Next.js", "Marketplace", "Reviews", "WhatsApp"],
+    github: null,
+    live: "https://fix-lk.vercel.app/",
+    screenshots: [{ src: "/images/projects/fixlk.webp", alt: "FixLK homepage: find a trusted electrician, plumber or carpenter near you" }],
+  },
+  {
+    slug: "langa",
+    name: "Langa",
+    category: "Social · Real-time",
+    context: "Independent build · Live product",
+    description:
+      "A location-based social app for meeting people nearby: browse who's online within a chosen radius, see shared interests and start a private real-time chat.",
+    problem:
+      "Meeting new people nearby usually means exposing your exact location — Langa needed discovery without that privacy cost.",
+    contribution:
+      "Built radius-based discovery with distances calculated server-side so coordinates are never shared, real-time chat with typing indicators and read receipts, and safety tools for hiding, blocking and reporting.",
+    tech: ["Next.js", "Geolocation", "Real-time Chat", "Privacy"],
+    github: null,
+    live: "https://chat-gamma-sandy.vercel.app/",
+    screenshots: [{ src: "/images/projects/langa.webp", alt: "Langa landing page: meet new people right around you" }],
+  },
+  {
+    slug: "seoul-aura",
+    name: "Seoul Aura",
+    category: "E-Commerce",
+    context: "Client build · seoulaura.lk",
+    description:
+      "A live online store selling authentic Korean skincare in Sri Lanka, with new arrivals, pre-orders, best sellers and islandwide delivery.",
+    problem:
+      "A K-beauty importer needed a store that builds trust in product authenticity and handles both in-stock items and pre-orders from Seoul.",
+    contribution:
+      "Built the storefront end to end: product catalogue and categories, pre-order flow, cart, promotions and a community section.",
+    tech: ["Next.js", "E-Commerce", "Pre-orders", "SEO"],
+    github: null,
+    live: "https://www.seoulaura.lk/",
+    screenshots: [{ src: "/images/projects/seoul-aura.webp", alt: "Seoul Aura storefront with a Korean skincare promotional banner" }],
+  },
+  {
+    slug: "ceylora",
+    name: "Ceylora",
+    category: "Travel Experience",
+    context: "Independent build · Live site",
+    description:
+      "An immersive guide to Sri Lanka — ancient kingdoms, misty tea country, wildlife and coastlines — told through real photography and an interactive island map.",
+    problem:
+      "Most Sri Lanka travel sites are lists of links; Ceylora set out to make the island feel like a story you scroll through.",
+    contribution:
+      "Designed and built the experience: scroll-driven chapters, destination and experience guides, an interactive map of 21 places and a travel journal.",
+    tech: ["Next.js", "Animation", "Interactive Map", "Editorial Design"],
+    github: null,
+    live: "https://ceylora-lime.vercel.app/",
+    screenshots: [{ src: "/images/projects/ceylora.webp", alt: "Ceylora homepage: Discover the soul of Sri Lanka, over Sigiriya at dusk" }],
   },
   {
     slug: "smart-pest-detection",

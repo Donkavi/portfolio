@@ -84,7 +84,8 @@ export type Project = {
   live: string | null;
   /** Add real screenshots under /public/images/projects and list them here. */
   screenshots: { src: string; alt: string }[];
-  visual: ProjectVisualKind;
+  /** Abstract illustration, used when there is no screenshot. */
+  visual?: ProjectVisualKind;
 };
 
 export type Education = {

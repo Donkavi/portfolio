@@ -122,7 +122,7 @@ export function CaseStudy({
                 <Image src={p.screenshots[0].src} alt={p.screenshots[0].alt} fill className="object-cover" sizes="90vw" />
               </div>
             ) : (
-              <ProjectVisual kind={p.visual} />
+              p.visual && <ProjectVisual kind={p.visual} />
             )}
           </motion.div>
 
