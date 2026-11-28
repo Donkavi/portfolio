@@ -88,6 +88,35 @@ export type Project = {
   visual?: ProjectVisualKind;
 };
 
+export type Publication = {
+  title: string;
+  authors: string[];
+  /** The author name to highlight as you. */
+  me: string;
+  venue: string;
+  status: string;
+  year: string;
+  summary: string;
+  method: string;
+  metrics: Stat[];
+  links: { label: string; href: string }[];
+};
+
+export type ResearchShowcase = {
+  title: string;
+  summary: string;
+  detail: string;
+  outcome: string;
+  tags: string[];
+  photos: { src: string; alt: string; caption: string }[];
+};
+
+export type Honour = {
+  title: string;
+  stat: Stat;
+  detail: string;
+};
+
 export type Education = {
   institution: string;
   qualification: string;

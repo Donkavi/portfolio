@@ -19,9 +19,12 @@
 import type {
   Certification,
   Education,
+  Honour,
   Photo,
   Profile,
   Project,
+  Publication,
+  ResearchShowcase,
   Role,
   Skill,
   SkillCategory,
@@ -471,6 +474,77 @@ export const projects: Project[] = [
   },
 ];
 
+/** Source: https://arxiv.org/abs/2608.27480 */
+export const publication: Publication = {
+  title:
+    "Effectiveness of IoT and Deep Learning for Detection and Severity Assessment of Postelectrotermes militaris in Tea Plantations",
+  authors: [
+    "D.K.C. Senevirathna",
+    "A.A.E. Nanayakkara",
+    "H.M.C.K. Kulathunga",
+    "J.K.D.P. Nadula",
+    "R.M. Mapatuna",
+    "Malithi Nawarathne",
+    "Jaliya L. Wijayaraja",
+    "P.D. Senanayake",
+    "Samitha Vidhanaarachchi",
+    "Kalpani Manathunga",
+  ],
+  me: "D.K.C. Senevirathna",
+  venue: "The Journal of Agricultural Sciences, Sri Lanka",
+  status: "Accepted for publication",
+  year: "2026",
+  summary:
+    "An IoT acoustic-monitoring framework that listens to tea trunks to detect the Upcountry Live Wood Termite early — and scores how severe each infestation is.",
+  method:
+    "A Raspberry Pi device with a high-sensitivity microphone records tea trunks non-invasively and tags each reading with GPS. Spectrograms feed a CNN, and a weighted severity model combines infestation probability, acoustic amplitude and infested neighbours within 5 m — mapped so managers can prioritise inspections.",
+  metrics: [
+    { value: "81.5%", numeric: 81.5, decimals: 1, suffix: "%", label: "Accuracy", note: "" },
+    { value: "83.0%", numeric: 83, decimals: 1, suffix: "%", label: "Recall", note: "" },
+    { value: "81.8%", numeric: 81.8, decimals: 1, suffix: "%", label: "F1-score", note: "" },
+    { value: "0.819", numeric: 0.819, decimals: 3, label: "ROC-AUC", note: "" },
+  ],
+  links: [
+    { label: "Read on arXiv", href: "https://arxiv.org/abs/2608.27480" },
+    { label: "DOI", href: "https://doi.org/10.48550/arXiv.2608.27480" },
+  ],
+};
+
+export const researchShowcase: ResearchShowcase = {
+  title: "Showcasing IoT + deep learning for the tea industry.",
+  summary:
+    "We showcased our final-year research at SLIIT — a pioneering effort to combine the Internet of Things with deep-learning models to change how pests are managed on tea plantations.",
+  detail:
+    "The IoT device we built identifies pest habitats and assesses the severity of infestations in the field, with a companion web dashboard and mobile app for monitoring.",
+  outcome: "Recognised for innovation in AI-driven agricultural technology.",
+  tags: ["IoT device", "Deep learning", "Habitat identification", "Severity assessment"],
+  photos: [
+    {
+      src: "/images/achievements/research-showcase-team.webp",
+      alt: "The research team at the SLIIT final-year showcase stand, with the project's mobile app, web dashboard, poster and awards",
+      caption: "The team at the showcase stand",
+    },
+    {
+      src: "/images/achievements/research-showcase-supervisor.webp",
+      alt: "The research team with a guest at the showcase stand, holding up the project's mobile app",
+      caption: "Demoing the companion app",
+    },
+  ],
+};
+
+export const honours: Honour[] = [
+  {
+    title: "First Class Honours",
+    stat: { value: "3.71", numeric: 3.71, decimals: 2, label: "CGPA", note: "/ 4.00" },
+    detail: "BSc (Hons) in Information Technology, specialising in Software Engineering — SLIIT.",
+  },
+  {
+    title: "Dean's List",
+    stat: { value: "6", numeric: 6, label: "Semesters", note: "semesters" },
+    detail: "Named on SLIIT's Dean's List for academic excellence across six semesters.",
+  },
+];
+
 export const education: Education[] = [
   {
     institution: "Sri Lanka Institute of Information Technology (SLIIT)",
@@ -479,6 +553,7 @@ export const education: Education[] = [
     period: "Jan 2020 — Jan 2024",
     highlights: [
       "CGPA 3.71 / 4.00 — First Class Honours",
+      "Dean's List — six semesters",
       "Final year research recognised for innovation in AI-driven agricultural technology",
     ],
   },
@@ -529,6 +604,7 @@ export const navItems = [
   { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
+  { id: "achievements", label: "Achievements" },
   { id: "contact", label: "Contact" },
 ] as const;
 

@@ -81,7 +81,7 @@ export function Contact() {
         className="pointer-events-none absolute left-1/2 top-[30%] size-[80vmax] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgb(200_240_74/0.08),transparent_60%)]"
       />
       <div className="container-x relative">
-        <SectionLabel index="06">Contact</SectionLabel>
+        <SectionLabel index="07">Contact</SectionLabel>
 
         <SplitReveal
           as="h2"

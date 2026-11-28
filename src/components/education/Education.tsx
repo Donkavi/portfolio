@@ -19,7 +19,7 @@ export function Education() {
       className="relative border-t border-line py-[clamp(6rem,14vw,12rem)]"
     >
       <div className="container-x">
-        <SectionLabel index="05">Education</SectionLabel>
+        <SectionLabel index="06">Education</SectionLabel>
         <SplitReveal
           as="h2"
           id="education-heading"
